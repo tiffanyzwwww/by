@@ -87,7 +87,7 @@ textarea:focus {
 button {
     font-family: "Microsoft Yahei", "微软雅黑", "Helvetica Neue", "Hiragino Sans GB", Tahoma, Arial, STHeiti, sans-serif;
     color: #fff;
-    font-size: .75rem;
+    font-size: .7rem;
     background-color: #f6f6f6;
     cursor: pointer;
     border: none;

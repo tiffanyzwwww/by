@@ -2,12 +2,17 @@ import Vue from 'vue';
 
 // 1.导入 vue-router，并使用
 import VueRouter from 'vue-router';
+
 Vue.use(VueRouter);
 
 import Index from './pages/Index.vue';
 import Home from './pages/Home.vue';
+import Detail from './pages/Detail.vue';
 import Login from './pages/Login.vue';
 import Register from './pages/Register.vue';
+
+// 测试数据
+import './tData.js';
 
 // 2.定义路由配置
 // 每个路由应该映射一个组件。 其中"component" 可以是
@@ -16,6 +21,10 @@ import Register from './pages/Register.vue';
 const routes = [{
     path: '/Home',
     component: Home
+},{
+    path: '/Detail/:imgId',
+    name: 'Detail',
+    component: Detail
 },{
     path: '/Login',
     component: Login

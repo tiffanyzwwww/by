@@ -6,7 +6,7 @@
     <div>
         <!-- 由于html不区分大小写，所以js中驼峰命名方式在html中要改成用短横线连接的形式 -->
         <index-header></index-header>
-        <imglist></imglist>
+        <imglist :imageList="imageList"></imglist>
         <footer-bar></footer-bar>
     </div>
 </template>
@@ -22,6 +22,11 @@ export default {
         indexHeader,
         imglist,
         footerBar
+    },
+    data () {
+        return {
+            imageList: tData.imageList
+        }
     }
 }
 </script>

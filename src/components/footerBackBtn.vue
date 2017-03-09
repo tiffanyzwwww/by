@@ -7,7 +7,6 @@
 	.footer-back-Btn button {
 		width: 100%;
 		height: 1.8rem;
-		margin-top: 1.5rem;
 		background-color: #faf67e;
 		color: #333;
 	}

@@ -20,7 +20,11 @@
 <template>
     <div class="index-imglist">
         <ul>
-            <li v-for="item in images"><img :src="item.src"></li>
+            <li v-for="item in imageList">
+                <router-link :to="{ name: 'Detail', params: {imgId: item.imgId}}">
+                    <img :src="item.src">
+                </router-link>
+            </li>
         </ul>
     </div>
 </template>
@@ -30,23 +34,12 @@ export default {
     name: 'imglist',
     data () {
         return {
-          images: [{
-            id: '1',
-            src: './src/assets/test.jpg'
-          },{
-            id: '2',
-            src: './src/assets/test.jpg'
-          },{
-            id: '3',
-            src: './src/assets/test.jpg'
-          },{
-            id: '4',
-            src: './src/assets/test.jpg'
-          },{
-            id: '5',
-            src: './src/assets/test.jpg'
-          }]
+            // images: []
         }
+    },
+    props: ['imageList'],
+    methods: {
+        
     }
 }
 </script>
