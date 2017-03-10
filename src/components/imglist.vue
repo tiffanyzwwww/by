@@ -6,13 +6,17 @@
 
 .index-imglist li {
     float: left;
-    width: 50%;
+    width: 49%;
     /*border: 1px solid red;*/
 }
 
+.index-imglist li:nth-child(odd) {
+    margin-right: .3rem;
+}
+
 .index-imglist ul li img {
-    width: 7.9rem;
-    height: 7.9rem;
+    width: 100%;
+    height: 8rem;
     text-align: center;
 }
 </style>
@@ -34,10 +38,11 @@ export default {
     name: 'imglist',
     data () {
         return {
-            // images: []
         }
     },
-    props: ['imageList'],
+    props: {
+        imageList: Array
+    },
     methods: {
         
     }

@@ -29,17 +29,29 @@
 
 <template>
 	<div class="footerBar">
-		<router-link to="/Login">
-			<button class="footerBar-btn-left">登陆</button>
+		<router-link :to="btn[0].path">
+			<button class="footerBar-btn-left">{{btn[0].text}}</button>
 		</router-link>
-		<router-link to="/Register">
-			<button class="footerBar-btn-right">注册</button>
+		<router-link :to="btn[1].path">
+			<button class="footerBar-btn-right">{{btn[1].text}}</button>
 		</router-link>
 	</div>
 </template>
 
 <script>
 	export default {
-		name: 'footer-bar'
+		name: 'footer-bar',
+		props: {
+			btn: {
+				type: Array,
+				default: [{
+					text: '登录',
+					path: '/Login'
+				},{
+					text: '注册',
+					path: '/Register'
+				}]
+			}
+		}
 	}
 </script>

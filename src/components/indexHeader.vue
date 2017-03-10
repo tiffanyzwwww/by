@@ -10,11 +10,22 @@
 </style>
 
 <template>
-	<div class="header">Header</div>
+	<div class="header">{{title}}</div>
 </template>
 
 <script>
 	export default {
-		name: 'index-header'
+		name: 'index-header',
+		props: {
+			title: {
+				type: String,
+				default: 'By'
+			}
+		},
+		data () {
+			return {
+
+			}
+		}
 	}
 </script>

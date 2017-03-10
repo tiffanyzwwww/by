@@ -95,19 +95,29 @@
 			},
 			submit: function() {
 				if (!this.check()) {
-					// return; // 测试时注释了就方便了
+					return; // 测试时注释了就方便了
 				}
+
+				var that = this;
 
 				// 木有后台，做个假的注册
 				layer.open({
 					type: 2,
 					content: '登录中',
-					time: 3
+					time: 2
 				});
 
 				setTimeout(function() {
-					
-				}, 3000);
+					tData.isLogin = true;
+
+					layer.open({
+						content: '登录成功，为你返回首页',
+						skin: 'msg',
+						time: 1
+					});
+
+					that.$router.push('/Home');
+				}, 2000);
 			}
 		}
 	}

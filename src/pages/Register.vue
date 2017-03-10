@@ -93,6 +93,10 @@
                 	msg = '两次输入密码不一致';
                 }
 
+                if (msg == '' && tData.isRegister) {
+                	msg = '请勿在短时间内重复注册';
+                }
+
                 if (msg) {
                     layer.open({
                     	content: msg,
@@ -106,19 +110,29 @@
 			},
 			submit: function() {
 				if (!this.check()) {
-					// return; // 测试时注释了就方便了
+					return; // 测试时注释了就方便了
 				}
+
+				var that = this;
 
 				// 木有后台，做个假的注册
 				layer.open({
 					type: 2,
 					content: '注册中',
-					time: 3
+					time: 2
 				});
 
 				setTimeout(function() {
+					tData.isRegister = true;
 
-				}, 3000);
+					layer.open({
+						content: '注册成功, 为你跳转到登录页',
+						skin: 'msg',
+						time: 1
+					});
+					
+					that.$router.push('/Login');
+				}, 2000);
 			}
 		}
 	}

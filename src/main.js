@@ -47,4 +47,3 @@ const app = new Vue({
 }).$mount('#app');
 
 router.push('/Home');
-// 5.现在，应用已经启动了！

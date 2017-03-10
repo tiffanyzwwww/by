@@ -6,8 +6,8 @@
     <div>
         <!-- 由于html不区分大小写，所以js中驼峰命名方式在html中要改成用短横线连接的形式 -->
         <index-header></index-header>
-        <imglist :imageList="imageList"></imglist>
-        <footer-bar></footer-bar>
+        <imglist :imageList="tData.imageList"></imglist>
+        <footer-bar v-if="!tData.isLogin" :btn="footerBtn"></footer-bar>
     </div>
 </template>
 
@@ -25,7 +25,14 @@ export default {
     },
     data () {
         return {
-            imageList: tData.imageList
+            tData: tData,
+            footerBtn: [{
+                    text: '登陆',
+                    path: '/Login'
+                },{
+                    text: '注册',
+                    path: '/Register'
+                }]
         }
     }
 }
