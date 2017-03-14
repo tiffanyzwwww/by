@@ -7,6 +7,7 @@ Vue.use(VueRouter);
 
 import Index from './pages/Index.vue';
 import Home from './pages/Home.vue';
+import Diy1 from './pages/Diy1.vue';
 import Detail from './pages/Detail.vue';
 import Login from './pages/Login.vue';
 import Register from './pages/Register.vue';
@@ -21,6 +22,9 @@ import './tData.js';
 const routes = [{
     path: '/Home',
     component: Home
+},{
+    path: '/Diy1',
+    component: Diy1
 },{
     path: '/Detail/:imgId',
     name: 'Detail',

@@ -8,6 +8,7 @@
         <index-header></index-header>
         <imglist :imageList="tData.imageList"></imglist>
         <footer-bar v-if="!tData.isLogin" :btn="footerBtn"></footer-bar>
+        <footer-bloack-btn :btn="footerBloackBtnData"></footer-bloack-btn>
     </div>
 </template>
 
@@ -15,13 +16,15 @@
 import indexHeader from '../components/indexHeader.vue';
 import imglist from '../components/imglist.vue';
 import footerBar from '../components/footerBar.vue';
+import footerBloackBtn from '../components/footerBloackBtn.vue';
 
 export default {
     name: 'Home',
     components: {
         indexHeader,
         imglist,
-        footerBar
+        footerBar,
+        footerBloackBtn
     },
     data () {
         return {
@@ -32,7 +35,11 @@ export default {
                 },{
                     text: '注册',
                     path: '/Register'
-                }]
+                }],
+            footerBloackBtnData: {
+                text: '定制属于你的Style',
+                path: '/Diy1'
+            }
         }
     }
 }
