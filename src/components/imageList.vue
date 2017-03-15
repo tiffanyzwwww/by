@@ -35,7 +35,7 @@
 
 <script>
 export default {
-    name: 'imglist',
+    name: 'image-list',
     data () {
         return {
         }

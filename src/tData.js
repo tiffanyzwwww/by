@@ -1,6 +1,6 @@
 window.tData = {
     isRegistr: false,
-    isLogin: false,
+    isLogin: !false,
     imageList: [{
         imgId: '0',
         title: '别浪猥琐发育',
