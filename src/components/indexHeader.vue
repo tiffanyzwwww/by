@@ -1,16 +1,24 @@
 <style>
 	.header {
 		width: 100%;
-		height: 6rem;
-		line-height: 6rem;
-		background-color: #faf67e;
-		font-size: 2rem;
-		text-align: center;
-	}	
+		height: 2.5rem;
+		line-height: 2.5rem;
+		background-color: #f7fc76;
+		font-size: 1.1rem;
+	}
+
+	.header img {
+		width: 1.1rem;
+		margin-left: .6rem;
+		margin-right: .2rem;
+	}
 </style>
 
 <template>
-	<div class="header">{{title}}</div>
+	<div class="header">
+		<img src="../assets/menus.png" alt="">
+		{{title}}
+	</div>
 </template>
 
 <script>
@@ -19,7 +27,7 @@
 		props: {
 			title: {
 				type: String,
-				default: 'By'
+				default: 'BY !'
 			}
 		},
 		data () {

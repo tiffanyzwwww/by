@@ -5,6 +5,19 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
+// 开启错误提示
+Vue.config.debug = true; 
+
+// reset
+import './assets/css/reset.css';
+
+// 轮播图
+import 'vue-swipe/dist/vue-swipe.css';
+import { Swipe, SwipeItem } from 'vue-swipe';
+Vue.component('swipe', Swipe);
+Vue.component('swipe-item', SwipeItem);
+
+
 import Index from './pages/Index.vue';
 import Home from './pages/Home.vue';
 import Diy1 from './pages/Diy1.vue';
