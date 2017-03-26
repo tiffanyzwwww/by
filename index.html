@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./plug/need/layer.css" />
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="./images/menus.png" alt=""> 主页
+    </div>
+    <div class="index-imglist">
+        <ul>
+            <li v-for="item in tData.imageList">
+                <a href="./detail.html?id={{item.imgId}}">
+                    <img :src="item.src">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footerBar">
+        <a href="./login.html">
+            <button class="footerBar-btn-left">登录</button>
+        </a>
+        <a href="./register.html">
+            <button class="footerBar-btn-right">注册</button>
+        </a>
+    </div>
+    <script src="./js/tdata.js"></script>
+    <script src="./plug/layer.js"></script>
+    <script src="./plug/vue.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

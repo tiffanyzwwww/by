@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册 By</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./plug/need/layer.css" />
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="./images/menus.png" alt=""> 注册
+    </div>
+    <div class="login-box">
+        <div>
+            帐号:
+            <input type="text" v-model="user">
+        </div>
+        <div>
+            密码:
+            <input type="password" v-model="pwd">
+        </div>
+        <div>
+            重复:
+            <input type="password" v-model="pwdd">
+        </div>
+        <div class="login-box-btn">
+            <button @click="submit">确认注册</button>
+        </div>
+    </div>
+    <a href="./index.html">
+        <div class="footer-back-Btn">
+            <button>返回首页</button>
+        </div>
+    </a>
+    <script src="./plug/layer.js"></script>
+    <script src="./plug/vue.min.js"></script>
+    <script src="./js/register.js"></script>
+</body>
+
+</html>

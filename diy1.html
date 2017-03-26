@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>定制</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./plug/need/layer.css" />
+    <link rel="stylesheet" href="./css/diy1.css">
+</head>
+
+<body>
+    <div class="diy-img">
+        <img :src="show.imgSrc" alt="">
+    </div>
+    <div class="diy-select">
+        <div class="diy-select-top">
+            <a v-for="item in menus" :class="{'active': item.id == show.selectBody}" @click="selectMenu(item)" href="javascript:void(0);">{{item.text}}</a>
+        </div>
+        <div class="diy-select-body" v-show="show.selectBody == 'type'">
+            <ul>
+                <li v-for="item in types" @click="showThis(item)">
+                    <img :src="item.imgSrc" alt="">
+                    <p>{{ item.text }}</p>
+                </li>
+            </ul>
+        </div>
+        <div class="diy-select-body" v-show="show.selectBody == 'color'">
+            <ul>
+                <li v-for="item in colors" @click="showThis(item)">
+                    <div class="t-color-button" style="background-color: {{item.color}}"></div>
+                    <p>{{ item.text }}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footerBloackBtn">
+        <button>直接上传</button>
+    </div>
+    <script src="./js/tdata.js"></script>
+    <script src="./plug/layer.js"></script>
+    <script src="./plug/vue.min.js"></script>
+    <script src="./js/diy1.js"></script>
+</body>
+
+</html>

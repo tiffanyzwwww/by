@@ -1,0 +1,43 @@
+.my-swipe {
+  height: 200px;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+}
+
+.slide1 {
+  background-color: #0089dc;
+  color: #fff;
+}
+
+.slide2 {
+  background-color: #ffd705;
+  color: #000;
+}
+
+.slide3 {
+  background-color: #ff2d4b;
+  color: #fff;
+}
+
+
+.index-imglist ul {
+    width: 100%;
+    /*text-align: left;*/
+}
+
+.index-imglist li {
+    float: left;
+    width: 49%;
+    /*border: 1px solid red;*/
+}
+
+.index-imglist li:nth-child(odd) {
+    margin-right: .3rem;
+}
+
+.index-imglist ul li img {
+    width: 100%;
+    height: 8rem;
+    text-align: center;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册 By</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./plug/need/layer.css" />
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="./images/menus.png" alt=""> 登录
+    </div>
+    <div class="login-box">
+        <div>
+            帐号:
+            <input type="text" v-model="user">
+        </div>
+        <div>
+            密码:
+            <input type="password" v-model="pwd">
+        </div>
+        <div class="login-box-btn">
+            <button @click="submit">登录</button>
+        </div>
+    </div>
+    <a href="./index.html">
+        <div class="footer-back-Btn">
+            <button>返回首页</button>
+        </div>
+    </a>
+    <script src="./plug/layer.js"></script>
+    <script src="./plug/vue.min.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
