@@ -130,7 +130,9 @@ a {
     margin-right: .2rem;
 }
 
+
 /* register & login footer */
+
 .footer-back-Btn {
     width: 12rem;
     margin: 0 auto;
@@ -141,6 +143,35 @@ a {
     height: 1.8rem;
     background-color: #faf67e;
     color: #333;
+}
+
+
+/* 底部两个按钮 */
+
+.footerBar {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    /*border: 1px solid red;*/
+}
+
+.footerBar button {
+    width: 50%;
+    float: left;
+    height: 2rem;
+    /*display: inline-block;*/
+    color: #666;
+}
+
+.footerBar-btn-left {
+    background-color: #f6f6f6;
+}
+
+.footerBar-btn-right {
+    background-color: #faf67e;
 }
 
 
