@@ -1,0 +1,169 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.clearfix {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+.content {
+    /*width: 640px;*/
+    /*height: 1140px;*/
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    background-color: #faf67e;
+}
+
+.header-left {
+    height: 76px;
+    float: left;
+}
+
+.header-left img {
+    float: left;
+    width: 40px;
+    margin: 15px 20px;
+}
+
+.header h1 {
+    font: 35px Corbel;
+    color: #676767;
+    line-height: 70px;
+}
+
+.scroll-img {
+    width: 100%;
+    height: 10.7rem;
+    /*border: 1px solid red;*/
+}
+
+.scroll-img img {
+    width: 100%;
+}
+
+.category {
+    width: 100%;
+    /*border: 1px solid red;*/
+}
+
+.category ul {
+    padding-left: .6rem;
+}
+
+.category li {
+    width: 25%;
+    float: left;
+    list-style-type: none;
+}
+
+.category li img {
+    width: 1.5rem;
+    margin-left: .5rem;
+}
+
+.category a {
+    text-align: center;
+    text-decoration: none;
+    color: #484848;
+    font-size: .65rem;
+}
+
+.show {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.detail {
+    width: 50%;
+    float: left;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.detail-img {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    /*width: 6rem;*/
+    margin: 10px 12px;
+}
+
+.detail-img img {
+    width: 6rem;
+    padding: 10px;
+}
+
+.like {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: .4rem;
+    right: 1.2rem;
+    z-index: 99;
+}
+
+.like img {
+    width: .8rem;
+}
+
+.detail h2 {
+    font: 12px "Microsoft YaHei";
+    color: #676767;
+    text-align: right;
+    margin-top: -1rem;
+    margin-right: 1rem;
+}
+
+.detail-userimg {
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 2.5px 4.33px 7px 0px rgba(0, 0, 0, 0.18);
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: -2rem;
+    /*margin-left: .5rem;*/
+    z-index: 38;
+}
+
+.detail-userimg img {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.add {
+    border-radius: 50%;
+    background-color: #faf67e;
+    position: fixed;
+    /*width: 90px;*/
+    /*height: 90px;*/
+    right: 20px;
+    bottom: 40px;
+    z-index: 100;
+}
+
+.add img {
+    width: 2.5rem;
+    height: 2.5rem;
+    vertical-align: middle;
+}
