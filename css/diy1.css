@@ -62,15 +62,20 @@
 
 .diy-select-body {
     text-align: center;
+    height: 8rem;
     font-size: .8rem;
 }
 
 .diy-select-body ul {
-    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
 
 .diy-select-body ul li {
     display: inline-block;
+    margin-left: .3rem;
+    margin-right: .3rem;
     /*border: 1px solid red;*/
 }
 
@@ -83,7 +88,7 @@
 }
 
 .diy-select-body p {
-    margin-top: .3rem;
+    margin-top: .5rem;
 }
 
 .diy-select-body ul li .t-color-button {
