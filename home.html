@@ -20,76 +20,46 @@
             <hr />
             <ul>
                 <li>
-                    <img src="./images/icon/hot.png" />
+                    <img src="./images/hot.png" />
                     <p><a href="#">最新推荐</a></p>
                 </li>
                 <li>
-                    <img src="./images/icon/selection.png" />
+                    <img src="./images/selection.png" />
                     <p><a href="#">最新活动</a></p>
                 </li>
                 <li>
-                    <img src="./images/icon/friend.png" />
+                    <img src="./images/friend.png" />
                     <p><a href="#">有趣的人</a></p>
                 </li>
                 <li>
-                    <img src="./images/icon/list.png" />
+                    <img src="./images/list.png" />
                     <p><a href="#">更多分类</a></p>
                 </li>
             </ul>
             <hr />
         </div>
         <div class="show">
-            <div class="detail">
-                <div class="like">
-                    <img src="./images/icon/like.png" />
+            <div class="detail" v-for="item in tData.imageList">
+                <div class="like" @click="like(item)">
+                    <img :src="item.isLike ? './images/like-fill.png' : './images/like.png'" />
                 </div>
                 <div class="detail-img">
-                    <img src="./images/show1.jpg" />
+                    <img :src="item.src" />
                 </div>
                 <div class="detail-userimg">
-                    <img src="./images/user/userimg.jpg" />
+                    <img :src="item.authorAvatar" />
                 </div>
-                <h2>By Tiffany</h2>
-            </div>
-            <div class="detail">
-                <div class="like"><img src="./images/icon/like-fill.png" /></div>
-                <div class="detail-img">
-                    <img src="./images/show2.jpg" />
-                </div>
-                <div class="detail-userimg">
-                    <img src="./images/user/userimg1.jpg" />
-                </div>
-                <h2>By Leo</h2>
-            </div>
-            <div class="detail">
-                <div class="like"><img src="./images/icon/like-fill.png" /></div>
-                <div class="detail-img">
-                    <img src="./images/show1.jpg" />
-                </div>
-                <div class="detail-userimg">
-                    <img src="./images/user/userimg.jpg" />
-                </div>
-                <h2>By Tiffany</h2>
-            </div>
-            <div class="detail">
-                <div class="like"><img src="./images/icon/like.png" /></div>
-                <div class="detail-img">
-                    <img src="./images/show2.jpg" />
-                </div>
-                <div class="detail-userimg">
-                    <img src="./images/user/userimg1.jpg" />
-                </div>
-                <h2>By Leo</h2>
+                <h2>By {{item.author}}</h2>
             </div>
             <div class="add">
-                <a href="./diy1.html"><img src="./images/icon/add.png" /></a>
+                <a href="./diy1.html"><img src="./images/add.png" /></a>
             </div>
         </div>
     </div>
     <script src="./plug/vue.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./plug/layer.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/home.js"></script>
 </body>
 
 </html>

@@ -22,7 +22,14 @@
     height: 58%;
     text-align: center;
     vertical-align: middle;
-    // border: 1px solid red;
+    position: relative;
+    /*border: 1px solid red;*/
+}
+
+.diy-img p {
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
 }
 
 .diy-img img {
@@ -99,4 +106,14 @@
     margin-top: .9rem;
     margin-right: .2rem;
     margin-left: .2rem;
+}
+
+
+/* size tap */
+.diy-select-body-size {
+	font-size: .6rem;
+}
+
+.diy-select-body-size-title p {
+	color: #51abc8;
 }

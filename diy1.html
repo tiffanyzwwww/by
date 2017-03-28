@@ -12,11 +12,30 @@
 
 <body>
     <div class="diy-img">
+        <p>{{submitData.size}}</p>
         <img :src="show.imgSrc" alt="">
     </div>
     <div class="diy-select">
         <div class="diy-select-top">
             <a v-for="item in menus" :class="{'active': item.id == show.selectBody}" @click="selectMenu(item)" href="javascript:void(0);">{{item.text}}</a>
+        </div>
+        <div class="diy-select-body" v-show="show.selectBody == 'size'">
+            <ul class="diy-select-body-size">
+                <li class="diy-select-body-size-title">
+                    <p></p>
+                    <p>型号</p>
+                    <p>肩宽</p>
+                    <p>胸围</p>
+                    <p>衣长</p>
+                </li>
+                <li v-for="item in sizes" @click="showThis(item)">
+                    <p>{{item.text}}</p>
+                    <p>{{item.model}}</p>
+                    <p>{{item.shoulderWidth}}</p>
+                    <p>{{item.bust}}</p>
+                    <p>{{item.length}}</p>
+                </li>
+            </ul>
         </div>
         <div class="diy-select-body" v-show="show.selectBody == 'type'">
             <ul>
@@ -35,7 +54,7 @@
             </ul>
         </div>
     </div>
-    <div class="footerBloackBtn">
+    <div class="footerBloackBtn" @click="submit">
         <button>直接上传</button>
     </div>
     <script src="./plug/vue.min.js"></script>
