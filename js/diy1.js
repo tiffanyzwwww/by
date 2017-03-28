@@ -5,6 +5,11 @@ var VM = new Vue({
             imgSrc: '',
             selectBody: ''
         },
+        submitData: {
+            size: '',
+            type: '',
+            color: ''
+        },
         menus: [{
             text: '尺码',
             id: 'size'
@@ -14,6 +19,31 @@ var VM = new Vue({
         }, {
             text: '颜色',
             id: 'color'
+        }],
+        sizes: [{
+            text: 'S',
+            model: '165/88A',
+            shoulderWidth: 44,
+            bust: 100,
+            length: 66
+        },{
+            text: 'M',
+            model: '172/92A',
+            shoulderWidth: 45,
+            bust: 104,
+            length: 68
+        },{
+            text: 'L',
+            model: '175/96A',
+            shoulderWidth: 46,
+            bust: 108,
+            length: 70
+        },{
+            text: 'XL',
+            model: '180/100A',
+            shoulderWidth: 48,
+            bust: 112,
+            length: 72
         }],
         types: [{
             text: '口袋短袖',
@@ -25,7 +55,7 @@ var VM = new Vue({
             text: '前短后长短袖',
             imgSrc: './images/t-type/tshirt3.jpg'
         }],
-        colors:  [{
+        colors: [{
             text: '黑色',
             color: '#000000',
             imgSrc: './images/t-color/blackt.jpg'
@@ -60,14 +90,20 @@ var VM = new Vue({
     },
     ready: function() {
         this.show.imgSrc = this.types[0].imgSrc;
-        this.show.selectBody = 'color';
+        this.show.selectBody = 'size';
     },
     methods: {
         showThis: function(item) {
-            this.show.imgSrc = item.imgSrc;
+            if (item.imgSrc) {
+                this.show.imgSrc = item.imgSrc;
+            }
+            this.submitData[this.show.selectBody] = item.text;
         },
         selectMenu: function(item) {
             this.show.selectBody = item.id;
+        },
+        submit: function() {
+            console.log(this.submitData);
         }
     }
 });
